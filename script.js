@@ -6,7 +6,7 @@ const commentField = document.getElementById('comment');
 
 let ratingValue = 0;
 
-// Handle star rating
+// التعامل مع تقييم النجوم
 stars.forEach((star) => {
   star.addEventListener("mouseover", () => {
     const value = star.getAttribute("data-value");
@@ -29,52 +29,62 @@ stars.forEach((star) => {
 
 function highlightStars(value) {
   stars.forEach((star) => {
-    star.classList.remove("hover");
     if (star.getAttribute("data-value") <= value) {
-      star.classList.add("hover");
+      star.classList.add("highlight");
+    } else {
+      star.classList.remove("highlight");
     }
   });
 }
 
-// Handle form submission
+// التعامل مع إرسال النموذج
 document.getElementById('ratingForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the form from submitting normally
+  event.preventDefault(); // منع إرسال النموذج بشكل طبيعي
 
-  // Check if rating and comment are provided
+  // التحقق من وجود تقييم وتعليق
   if (ratingValue === 0 || commentField.value.trim() === '') {
-    errorMessage.style.display = 'block'; // Show error message
-    return; // Stop the submission
+    errorMessage.style.display = 'block'; // عرض رسالة الخطأ
+    return; // إيقاف الإرسال
   }
 
-  // Hide the rating system gradually
+  // إخفاء نظام التقييم تدريجياً
   ratingSystem.style.opacity = '0';
 
-  // Show the thank you message
+  // عرض رسالة الشكر
   thankYouMessage.style.display = 'block';
   thankYouMessage.style.opacity = '1';
 
-  // Hide the thank you message and show the rating system again after 3 seconds
+  // إخفاء رسالة الشكر وعرض نظام التقييم مرة أخرى بعد 3 ثوانٍ
   setTimeout(function() {
     thankYouMessage.style.opacity = '0';
 
     setTimeout(function() {
       thankYouMessage.style.display = 'none';
 
-      // Reset the rating stars
+      // إعادة تعيين النجوم
       stars.forEach(star => {
         star.classList.remove('selected');
-        star.classList.remove('hover'); // Ensure hover class is also removed
+        star.classList.remove('highlight'); // التأكد من إزالة فئة التمييز أيضاً
       });
-      ratingValue = 0; // Reset ratingValue to 0
+      ratingValue = 0; // إعادة تعيين قيمة التقييم إلى 0
       
-      // Clear the textarea
+      // مسح النص في مربع التعليق
       commentField.value = '';
 
-      // Hide error message
+      // إخفاء رسالة الخطأ
       errorMessage.style.display = 'none';
       
-      // Show the rating system again
+      // عرض نظام التقييم مرة أخرى
       ratingSystem.style.opacity = '1';
-    }, 1000); // Time for the fade-out transition to complete
-  }, 3000); // 3 seconds delay
+    }, 1000); // الوقت اللازم لإكمال الانتقال تدريجياً
+  }, 3000); // تأخير 3 ثوانٍ
 });
+function highlightStars(value) {
+  stars.forEach((star) => {
+    if (star.getAttribute("data-value") <= value) {
+      star.classList.add("highlight");
+    } else {
+      star.classList.remove("highlight");
+    }
+  });
+}

@@ -1060,3 +1060,228 @@ textarea:focus {
   transform: translateY(-42px) rotate(0);
   opacity: 1;
 }
+/* الأساسيات لتصميم الـ textarea */
+textarea {
+  width: 80%;
+  height: auto;
+  min-height: 150px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #f7f7f7;
+  font-size: 16px;
+  resize: vertical;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 123, 255, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* عند التركيز على الـ textarea */
+textarea:focus {
+  border-color: #007bff;
+  background: #eaf5ff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3), 0 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Media Queries لتحسين تصميم textarea على الأجهزة المحمولة */
+@media (max-width: 768px) {
+  textarea {
+    min-height: 120px;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  textarea {
+    min-height: 100px;
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav {
+    display: none;
+  }
+
+  header .nav.show {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  header .nav ul {
+    display: block;
+  }
+
+  header .nav ul li {
+    margin: 10px 0;
+  }
+
+  #menuButton {
+    display: flex;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main .right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .skills .skill-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills .skill-items .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio .portfo-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio .portfo-items .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .feedback .customers {
+    flex-direction: column;
+  }
+
+  .feedback .customers .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-brand img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav {
+    display: none;
+  }
+
+  header .nav.show {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  header .nav ul {
+    display: block;
+  }
+
+  header .nav ul li {
+    margin: 10px 0;
+  }
+
+  #menuButton {
+    display: flex;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main .right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .skills .skill-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills .skill-items .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio .portfo-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio .portfo-items .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .feedback .customers {
+    flex-direction: column;
+  }
+
+  .feedback .customers .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-brand img {
+    width: 80px;
+  }
+}
+/*01030794180*/
